@@ -15,7 +15,9 @@ for (let i = 0; i < possibleSquares.length; i++) {
     let cost = 0;
     for (let j = 0; j < 3; j++) {
         for (let k = 0; k < 3; k++) {
-            cost += Math.abs(possibleSquares[i][j][k] - s[j][k]);
+          const possFrac = possibleSquares[i][j][k];
+          const sFrac = s[j][k];          
+            cost += Math.abs(possFrac - sFrac);
         }
     }
     minCost = Math.min(minCost, cost);
