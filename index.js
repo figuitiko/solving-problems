@@ -1,15 +1,17 @@
-const getTotalX = require('./twoSets');
-const gradingStudents = require('./rounded');
-const breakingRecords = require('./breakingRecords');
-const birthday = require('./birthday');
-const divisibleSumPairs  =require('./divisibleSumPairs');
-const migratoryBirds = require('./migratoryBirds');
-const dayOfProgrammer = require('./dayOfProgrammer');
-const bonAppetit = require('./bonAppetit');
-const sockMerchant =require('./sockMerchant')
-const combinations = require('./combinations');
-const pageCount =  require('./pageCount');
-const valley = require('./countingValleys');
+// const getTotalX = require('./twoSets');
+// const gradingStudents = require('./rounded');
+// const breakingRecords = require('./breakingRecords');
+// const birthday = require('./birthday');
+// const divisibleSumPairs  =require('./divisibleSumPairs');
+// const migratoryBirds = require('./migratoryBirds');
+// const dayOfProgrammer = require('./dayOfProgrammer');
+// const bonAppetit = require('./bonAppetit');
+// const sockMerchant =require('./sockMerchant')
+// const combinations = require('./combinations');
+// const pageCount =  require('./pageCount');
+// const valley = require('./countingValleys');
+const interestingPolygon = require('./src/interestingPolygon');
+const countStatues = require('./src/countStatues');
 // const arr = [1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4];
 // const result = migratoryBirds(arr);
 // console.log(result);
@@ -38,4 +40,7 @@ const valley = require('./countingValleys');
 // console.log(combinations(['a','b','c']));
 
 //console.log(pageCount(6,5))
-valley(8, 'DDUUDDUDUUUD');
+//valley(8, 'DDUUDDUDUUUD');
+
+// console.log(interestingPolygon(3));
+console.log(countStatues([6, 2, 3, 8]));
