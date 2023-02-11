@@ -1,5 +1,4 @@
-countStatues =(statues) => {
-  // const sortedStatues = statues.sort((a,b)=> a-b);
+countStatues =(statues) => {  
   const max = Math.max(...statues);
   const min = Math.min(...statues);
   const arrFromMax = [];

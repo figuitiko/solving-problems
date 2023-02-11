@@ -6,8 +6,7 @@ const bonAppetit = (bill, k, b)=>{
   }else{
     let  result = total/2 -b;
     result = Math.abs(result);
-    result = result.toString();
-    
+    result = result.toString();    
     process.stdout.write(result);
   }
  
