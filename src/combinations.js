@@ -14,4 +14,6 @@ const combinations =(elements)=>{
   return [...combsWithoutFirst, ...combsWithFirst];
 }
 
+console.log(combinations(['a', 'b', 'c']));
+
 module.exports	 =  combinations;
