@@ -1,21 +1,16 @@
 const gradingStudents = (grades) => {
-
-
-
   const result = grades.map(grade => {
-
     if (grade < 38) {
-
-      return grade;
+      return grade
     }
-    const integerDiv = Math.floor(grade / 5);
-    const nextDiv = integerDiv * 5 + 5;
+    const integerDiv = Math.floor(grade / 5)
+    const nextDiv = integerDiv * 5 + 5
     if ((nextDiv - grade) < 3) {
-      return nextDiv;
+      return nextDiv
     }
-    return grade;
+    return grade
   })
-  return result;
+  return result
 }
 
-module.exports = gradingStudents;
+module.exports = gradingStudents

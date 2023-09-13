@@ -1,25 +1,23 @@
-const squares = (a,b) =>{
-  return Math.floor(Math.sqrt(b)-Math.ceil(Math.sqrt(a))) +1
+const squares = (a, b) => {
+  return Math.floor(Math.sqrt(b) - Math.ceil(Math.sqrt(a))) + 1
 }
-const squares1 = (a, b) =>{
+const squares1 = (a, b) => {
   let squaresAmount = 0
-  for(let i=a; i<= b; i++ ){    
-    if(i > 0 && Math.sqrt(i) % 1 === 0 ){
-      squaresAmount++;
+  for (let i = a; i <= b; i++) {
+    if (i > 0 && Math.sqrt(i) % 1 === 0) {
+      squaresAmount++
     }
   }
-  
-  return squaresAmount;
+
+  return squaresAmount
 }
-const squaresRecursive = (a,b, squaresAmount=0) =>{
+const squaresRecursive = (a, b, squaresAmount = 0) => {
   if (a > b) {
-    return squaresAmount;
+    return squaresAmount
   }
   if (a > 0 && Math.sqrt(a) % 1 === 0) {
-    squaresAmount++;
+    squaresAmount++
   }
-  return squares1(a + 1, b, squaresAmount);
-
+  return squares1(a + 1, b, squaresAmount)
 }
-console.log(squaresRecursive(3,9));
-
+console.log(squaresRecursive(3, 9))

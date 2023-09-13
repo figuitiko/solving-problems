@@ -1,9 +1,9 @@
-let arr = [1, 1, 2 ];
+const arr = [1, 1, 2]
 
 // let result = arr.reduce((acc, current, index) => {
 //   // console.log(acc, current , index);
 //   if (index >= 0 && arr[index+1] < current) {
-    
+
 //     return acc;
 //   }
 //   return current;
@@ -11,18 +11,18 @@ let arr = [1, 1, 2 ];
 
 // console.log(result); // Output: false
 
-const checkSorted = (arr)=>{
-  let i =0;
-  while(i < arr.length-1){
-    if(arr[i+1] <= arr[i]){
-      return false;
+const checkSorted = (arr) => {
+  let i = 0
+  while (i < arr.length - 1) {
+    if (arr[i + 1] <= arr[i]) {
+      return false
     }
-    i++;
+    i++
   }
-  return true;
-};
+  return true
+}
 
-console.log(checkSorted(arr));
+console.log(checkSorted(arr))
 // const subtraction =  arr.reduceRight((acc,current, index)=> {
 //   if(index < arr.length-1){
 //     const subtraction = acc-current;

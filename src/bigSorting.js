@@ -17,7 +17,7 @@ try {
  * The function accepts STRING_ARRAY unsorted as parameter.
  */
 // const bigSorting = (unsorted) => {
-  
+
 // }
 
 // // console.log(bigSorting(['1', '200', '150', '200']))

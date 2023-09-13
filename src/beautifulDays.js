@@ -1,13 +1,13 @@
 const beautifulDays = (i, j, k) => {
-  let countBeautiful = 0;
-  while(i<= j){
-   let reverse =Number(String(i).split("").reverse().join(""));
-   let beautifulCal = (i-reverse)/k; 
-   if(Number.isInteger(beautifulCal)){
-    countBeautiful++;
-   }   
-   i++;
+  let countBeautiful = 0
+  while (i <= j) {
+    const reverse = Number(String(i).split('').reverse().join(''))
+    const beautifulCal = (i - reverse) / k
+    if (Number.isInteger(beautifulCal)) {
+      countBeautiful++
+    }
+    i++
   }
-  return countBeautiful;
+  return countBeautiful
 }
-console.log(beautifulDays(20,23,6));
+console.log(beautifulDays(20, 23, 6))

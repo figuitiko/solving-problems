@@ -6,13 +6,13 @@
  */
 
 const cutTheSticks = (arr) => {
-  const arrResult = [];
-  while(arr.length >0){
+  const arrResult = []
+  while (arr.length > 0) {
     arrResult.push(arr.length)
-    arr = arr.map((item)=> item-1 ).filter((itemToFilter)=> itemToFilter !=0);
+    arr = arr.map((item) => item - 1).filter((itemToFilter) => itemToFilter != 0)
   }
-  
-  return [...new Set(arrResult)];
+
+  return [...new Set(arrResult)]
 }
 
 // console.log(cutTheSticks([5, 4, 4, 2, 2,8]))

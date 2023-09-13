@@ -7,14 +7,14 @@
  *  2. INTEGER_ARRAY arr
  */
 
-function beautifulTriplets(d, arr) {
-  const mp = new Map();
-  let result = 0;
-  for (let a of arr) {
-    mp.set(a, (mp.get(a) || 0) + 1);
-    result += (mp.get(a - d) || 0) * (mp.get(a - 2 * d) || 0);
+function beautifulTriplets (d, arr) {
+  const mp = new Map()
+  let result = 0
+  for (const a of arr) {
+    mp.set(a, (mp.get(a) || 0) + 1)
+    result += (mp.get(a - d) || 0) * (mp.get(a - 2 * d) || 0)
   }
-  return result; 
+  return result
 }
 
 // const checkIfBeautiful = (d, arr) => {

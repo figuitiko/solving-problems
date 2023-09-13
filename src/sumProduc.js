@@ -1,17 +1,16 @@
-function solution(n) {
-  
+function solution (n) {
   const nArr = n.toString().split('').map(item => parseInt(item))
   console.log(nArr)
-  const product = nArr.reduce((a,b) => a * b)
-  const sum = nArr.reduce((a,b) => a + b)
+  const product = nArr.reduce((a, b) => a * b)
+  const sum = nArr.reduce((a, b) => a + b)
   return product - sum
 }
 
 console.log(solution(234))
 
-// A string is said to be beautiful if each letter in the string appears at most as many times 
-//as the previous letter in the alphabet within the string; ie: b occurs no more times than a; 
-//c occurs no more times than b; etc.Note that letter a has no previous letter.
+// A string is said to be beautiful if each letter in the string appears at most as many times
+// as the previous letter in the alphabet within the string; ie: b occurs no more times than a;
+// c occurs no more times than b; etc.Note that letter a has no previous letter.
 // Given a string, check whether it is beautiful.
 
 // For inputString = "bbbaacdafe", the output should be solution(inputString) = true.

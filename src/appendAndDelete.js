@@ -8,27 +8,27 @@
  *  3. INTEGER k
  */
 
-const appendAndDelete = (s, t, k) =>{  
-  const lengthS = s.length;
-  const lengthT = t.length;
+const appendAndDelete = (s, t, k) => {
+  const lengthS = s.length
+  const lengthT = t.length
 
-  const smallerLength = Math.min(lengthS, lengthT);
-  let idx = smallerLength;
-  for(let i=0; i< smallerLength; i++){
-    if(s[i] !== t[i]){
-      idx =i;
-      break;
-    }    
+  const smallerLength = Math.min(lengthS, lengthT)
+  let idx = smallerLength
+  for (let i = 0; i < smallerLength; i++) {
+    if (s[i] !== t[i]) {
+      idx = i
+      break
+    }
   }
-  const charactersNeeded = (lengthS + lengthT) -2 *idx;
-  if(charactersNeeded === k) return 'Yes';
-  if(charactersNeeded < k && (2*idx +charactersNeeded <= k)) return 'Yes';
-  if(charactersNeeded <  k && (k-charactersNeeded)%2 === 0) return 'Yes';
-  return 'No';
+  const charactersNeeded = (lengthS + lengthT) - 2 * idx
+  if (charactersNeeded === k) return 'Yes'
+  if (charactersNeeded < k && (2 * idx + charactersNeeded <= k)) return 'Yes'
+  if (charactersNeeded < k && (k - charactersNeeded) % 2 === 0) return 'Yes'
+  return 'No'
 }
-console.log(appendAndDelete('ashley', 'ash', 2));
+console.log(appendAndDelete('ashley', 'ash', 2))
 
-//const charactersNeeded = (lengthS + lengthT) -2 *idx;
+// const charactersNeeded = (lengthS + lengthT) -2 *idx;
 
 // Here, lengthS and lengthT are the lengths of strings s and t, respectively, and idx is the index where the two strings differ. The formula (lengthS + lengthT) - 2 * idx gives us the total number of characters that need to be deleted from string s and added to string t to transform s into t.
 

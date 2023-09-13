@@ -1,15 +1,15 @@
-function* Add(x) {
-    yield x + 1;
-    var y = yield(null);
-    y = 6
+function * Add (x) {
+  yield x + 1
+  let y = yield (null)
+  y = 6
 
-    return x + y;
+  return x + y
 }
 
-var gen = Add(5);
-console.log(gen.next());
-console.log(gen.next());
-console.log(gen.next());
-gen.next();
+const gen = Add(5)
+console.log(gen.next())
+console.log(gen.next())
+console.log(gen.next())
+gen.next()
 
-gen.next();
+gen.next()

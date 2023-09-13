@@ -1,17 +1,16 @@
-const allLongestStrings = (inputArray) =>{
-
-  let maxArr = [];
-  let maxVal = 0;
-  for(let val of inputArray){
-      if(val.length > maxVal){
-        maxVal = val.length;
-      }
-  }
-  for(let val of inputArray){
-    if(val.length === maxVal){
-      maxArr.push(val);
+const allLongestStrings = (inputArray) => {
+  const maxArr = []
+  let maxVal = 0
+  for (const val of inputArray) {
+    if (val.length > maxVal) {
+      maxVal = val.length
     }
   }
-  return maxArr;
+  for (const val of inputArray) {
+    if (val.length === maxVal) {
+      maxArr.push(val)
+    }
+  }
+  return maxArr
 }
-console.log(allLongestStrings(["aba", "aa", "ad", "vcd", "aba"]));
+console.log(allLongestStrings(['aba', 'aa', 'ad', 'vcd', 'aba']))

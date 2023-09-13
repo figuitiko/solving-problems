@@ -1,4 +1,4 @@
-function solution(inputArray) {
+function solution (inputArray) {
   let moves = 0
 
   for (let i = 1; i < inputArray.length; i++) {
