@@ -62,4 +62,3 @@ const fibonacciTabulation = (n) => {
 }
 
 console.log(fibonacciTabulation(6))
- 
