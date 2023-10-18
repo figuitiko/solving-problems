@@ -34,6 +34,8 @@ const permutations = (elements) => {
 // console.log(permutations(['a', 'b', 'c']))
 // console.log(permutations([0, 2, 2, 3]))
 // console.log(permutations([7, 4, 9, 6]))
-console.log(permutations([7, 4]))
-console.log(combinations([7, 4]))
+console.log(permutations([1, 2, 3]))
+// console.log(combinations([7, 4, 1]))
 // console.log(permutations([7, 4, 3]))
+
+// const myPermutations =

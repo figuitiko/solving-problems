@@ -20,7 +20,7 @@ const merge = (left, right) => {
 }
 
 console.log(mergeSort([4, 2, 1, 9, 3]))
-console.log(mergeSort([4, 2, 1]))
+// console.log(mergeSort([4, 2, 1]))
 
 // const mergeSortRecursive = (arr) => {
 //   const mid = Math.floor(arr.length / 2)

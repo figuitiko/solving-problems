@@ -11,8 +11,9 @@ const superDigit = (n, k) => {
   const totalN = n.repeat(k)
   const calDigit = (d) => {
     if (d.length === 1) return d
-    const total = d.split('').map(BigInt).reduce((a, b) => a + b)
-    return calDigit(total.toString())
+    const total = d.split('').map(BigInt).reduce((a, b) => BigInt(a) + BigInt(b), 0)
+    const result = calDigit(total.toString())
+    return result
   }
   return calDigit(totalN)
 }
