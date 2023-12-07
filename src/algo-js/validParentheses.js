@@ -1,6 +1,6 @@
 const validParentheses = (s) => {
   const stack = []
-  for (let i = 0; i < stack.length; i++) {
+  for (let i = 0; i < s.length; i++) {
     const char = s[i]
     if (char === '(' || char === '{' || char === '[') {
       stack.push(char)

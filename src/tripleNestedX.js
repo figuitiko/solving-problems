@@ -44,4 +44,4 @@ const tripleNestedX = (n, ch1, ch2, ch3) => {
     afterSpace = (afterSpace - 1) > 0 ? afterSpace - 1 : 0
   }
 }
-tripleNestedX(6, '#', '%', '*')
+tripleNestedX(12, '#', '%', '*')

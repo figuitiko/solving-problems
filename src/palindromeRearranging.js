@@ -19,11 +19,15 @@ const palindromeRearranging = (inputString) => {
 }
 
 // const palindromeIndex
-const checkifPalindrome = (s) => {
+const checkifPalindrome = (sentence) => {
   let i = 0
-  let j = s.length - 1
+  let alphabet = 'abcdfghijklmnopqrst'
+  let j = sentence.length - 1
   while (i <= j) {
-    if (s[i] !== s[j]) {
+    if ((!alphabet.includes(sentence[i].toLowerCase()) || (!alphabet.includes / (sentence[j].toLowerCase())))) {
+      break
+    }
+    if (sentence[i] !== sentence[j]) {
       return false
     }
     i++
