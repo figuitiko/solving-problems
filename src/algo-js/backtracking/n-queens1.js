@@ -9,13 +9,13 @@ const nQueens1 = (n) => {
 
   const isValid = (r, c) => !(col.has(c) || posDiag.has(r + c) || negDiag.has(r - c))
 
-  const addQeen = (r, c) => {
+  const addQueen = (r, c) => {
     col.add(c)
     posDiag.add(r + c)
     negDiag.add(r - c)
     board[r][c] = 'Q'
   }
-  const removeTheQeen = (r, c) => {
+  const removeTheQueen = (r, c) => {
     col.delete(c)
     posDiag.delete(r + c)
     negDiag.delete(r - c)
@@ -27,9 +27,9 @@ const nQueens1 = (n) => {
     }
     for (let col = 0; col < n; col++) {
       if (isValid(row, col)) {
-        addQeen(row, col)
+        addQueen(row, col)
         recurse(row + 1)
-        removeTheQeen(row, col)
+        removeTheQueen(row, col)
       }
     }
   }

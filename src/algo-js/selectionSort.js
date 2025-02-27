@@ -6,7 +6,7 @@ const selectionSort = (nums) => {
         minIndex = j
       }
     }
-    [nums[i], nums[minIndex]] = [nums[minIndex], nums[i]]
+    ;[nums[i], nums[minIndex]] = [nums[minIndex], nums[i]]
   }
   return nums
 }

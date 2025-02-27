@@ -13,3 +13,18 @@ const permutationRecursive = (nums) => {
 }
 
 console.log(permutationRecursive([1, 2]))
+
+const permutations = (nums, currArr = [], res = []) => {
+  if (nums.length === 0) {
+    res.push([...currArr])
+    return
+  }
+  for (let i = 0; i < nums.length; i++) {
+    const rest = nums.filter((_, idx) => idx !== i)
+    currArr.push(nums[i])
+    permutations(rest, currArr, res)
+    currArr.pop()
+  }
+  return res
+}
+console.log(permutations([1, 2, 3]))
