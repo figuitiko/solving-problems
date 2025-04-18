@@ -1,12 +1,10 @@
 const missingNumbers = (nums) => {
-  nums.sort((a, b) => a - b)
   const result = []
-  let i = 0
-  while (i < nums.length) {
-    if (i < nums.length && nums[i + 1] - nums[i] !== 1) {
-      result.push(nums[i] + 1)
+  const dp = Array.from({ length: nums.length + 2 }, (_, idx) => idx + 1)
+  for (const item of dp) {
+    if (!nums.includes(item)) {
+      result.push(item)
     }
-    i++
   }
   return result
 }
