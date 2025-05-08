@@ -1,14 +1,14 @@
 const productExceptSelf = (nums) => {
   const res = []
-  let start = 1
+  let prefix = 1
   for (let i = 0; i < nums.length; i++) {
-    res.push(start)
-    start = start * nums[i]
+    res.push(prefix)
+    prefix *= nums[i]
   }
-  let start2 = 1
+  let postFix = 1
   for (let i = nums.length - 1; i >= 0; i--) {
-    res[i] = start2 * res[i]
-    start2 = start2 * nums[i]
+    res[i] *= postFix
+    postFix *= nums[i]
   }
   return res
 }

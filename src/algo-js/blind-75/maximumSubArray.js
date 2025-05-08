@@ -1,17 +1,15 @@
 const maximumSubArray = (nums) => {
   let currMax = nums[0]
   let maxima = nums[0]
-  const currMaxArr = []
-  const maximaArr = []
+  // const currMaxArr = []
+  // const maximaArr = []
 
   for (let i = 1; i < nums.length; i++) {
     currMax = Math.max(nums[i], currMax + nums[i])
-    currMaxArr.push(currMax)
+    // currMaxArr.push(currMax)
     maxima = Math.max(maxima, currMax)
-    maximaArr.push(maxima)
+    // maximaArr.push(maxima)
   }
-  console.log({ currMaxArr })
-  console.log({ maximaArr })
   return maxima
 }
 
