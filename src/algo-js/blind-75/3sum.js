@@ -1,6 +1,6 @@
 const threeSum = (nums) => {
   if (nums.length === 0) return []
-  nums = nums.sort((a, b) => a - b)
+  nums.sort((a, b) => a - b)
   const res = []
   for (let i = 0; i < nums.length - 2; i++) {
     // stop duplicates from occuring
@@ -26,4 +26,4 @@ const threeSum = (nums) => {
   }
   return res
 }
-console.log(threeSum([-1, 0, 1, 2, -1, -4]))
+console.log(threeSum([-1, 0, 1, 2, -1, -1, -4]))
