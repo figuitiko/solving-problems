@@ -6,3 +6,4 @@ const decode = (s) => {
   if (s === null) return []
   return s.split('-encodeStr')
 }
+console.log(decode(encode('ceripo')))
