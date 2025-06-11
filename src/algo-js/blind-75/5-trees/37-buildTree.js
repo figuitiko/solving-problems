@@ -13,3 +13,7 @@ const buildTree = (preOrder, inOrder) => {
   }
   return recurse(0, preOrder.length - 1, 0, inOrder.length - 1)
 }
+const preOrder = [3, 9, 20, 15, 7]
+const inOrder = [9, 3, 15, 20, 7]
+
+console.log(buildTree(preOrder, inOrder))
