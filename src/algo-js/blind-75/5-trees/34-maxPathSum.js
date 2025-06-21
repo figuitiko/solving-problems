@@ -6,7 +6,7 @@ const maxPathSum = (root) => {
     if (!root) return 0
     const left = Math.max(0, dfs(root.left))
     const right = Math.max(0, dfs(root.right))
-    const currMax = Math.max(left + root.val + right)
+    const currMax = left + root.val + right
     max = Math.max(currMax, max)
     return root.val + Math.max(left, right)
   }
