@@ -17,7 +17,7 @@ function traverseANdColorNodes (node, edges, colors) {
   colors[node] = GREY
 
   const neighbors = edges[node]
-  for (const neighbor in neighbors) {
+  for (const neighbor of neighbors) {
     const neighborColor = colors[neighbor]
     if (neighborColor === GREY) return true
     if (neighborColor !== WHITE) continue
