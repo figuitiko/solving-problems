@@ -15,6 +15,11 @@ const mergeLists = (list1, list2) => {
     }
     dummy = dummy.next
   }
+  if (list1 === null) {
+    dummy.next = list2
+  } else {
+    dummy.next = list1
+  }
   return head.next
 }
 const mergeKLists = (lists) => {
@@ -29,3 +34,16 @@ const mergeKLists = (lists) => {
   }
   return lists[0]
 }
+
+const four1 = new ListNode(4)
+const two1 = new ListNode(2, four1)
+const one1 = new ListNode(1, two1)
+
+const five2 = new ListNode(5)
+const three2 = new ListNode(3, five2)
+const one2 = new ListNode(1, three2)
+
+const six3 = new ListNode(6)
+const three3 = new ListNode(3, six3)
+
+mergeKLists([one1, one2, three3])
