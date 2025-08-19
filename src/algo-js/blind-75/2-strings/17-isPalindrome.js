@@ -24,7 +24,7 @@ const isPal = (s) => {
       return false
     }
     left++
-    right++
+    right--
   }
   return true
 }

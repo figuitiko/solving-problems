@@ -11,12 +11,14 @@ const trap = (height) => {
   while (l < r) {
     if (leftMax < rightMax) {
       l++
-      leftMax = Math.max(leftMax, height[l])
-      res += leftMax - height[l]
+      const currLeftHeight = height[l]
+      leftMax = Math.max(leftMax, currLeftHeight)
+      res += leftMax - currLeftHeight
     } else {
       r--
-      rightMax = Math.max(rightMax, height[r])
-      res += rightMax - height[r]
+      const currRightHeight = height[r]
+      rightMax = Math.max(rightMax, currRightHeight)
+      res += rightMax - currRightHeight
     }
   }
   return res

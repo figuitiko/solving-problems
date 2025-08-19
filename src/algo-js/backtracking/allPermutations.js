@@ -12,7 +12,7 @@ const allPermutations = (nums, arr = [], res = []) => {
   return res
 }
 
-//  console.log(allPermutations([1, 2, 3]))
+console.log(allPermutations([1, 2, 3]))
 
 const permutationsTabulation = (arr) => {
   const table = Array.from({ length: arr.length + 1 }, () => [])
