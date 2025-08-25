@@ -2,7 +2,7 @@ const { TreeNode } = require('..')
 
 const invertTree = (root) => {
   if (root) {
-    [root.left, root.invertTree] = [invertTree(root.right), invertTree(root.left)]
+    [root.left, root.right] = [invertTree(root.right), invertTree(root.left)]
   }
   return root
 }
