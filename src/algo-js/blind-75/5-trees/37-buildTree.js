@@ -17,3 +17,13 @@ const preOrder = [3, 9, 20, 15, 7]
 const inOrder = [9, 3, 15, 20, 7]
 
 console.log(buildTree(preOrder, inOrder))
+
+const buildTree1 = (preOrder, inOrder) => {
+  if (!preOrder.length || !inOrder.length) return null
+  const root = new TreeNode(preOrder[0])
+  const mid = inOrder.indexOf(preOrder[0])
+  root.left = buildTree1(preOrder.slice(1, mid + 1), inOrder.slice(0, mid))
+  root.right = buildTree1(preOrder.slice(mid + 1), inOrder.slice(mid + 1))
+  return root
+}
+console.log(buildTree1(preOrder, inOrder))

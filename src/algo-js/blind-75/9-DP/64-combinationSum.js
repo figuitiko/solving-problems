@@ -1,6 +1,6 @@
 const combinationSum = (candidates, target) => {
   candidates.sort((a, b) => a - b)
-  const dp = [[[]]]
+  const dp = [[]]
 
   for (let sum = 0; sum <= target; sum++) {
     dp[sum] = []
