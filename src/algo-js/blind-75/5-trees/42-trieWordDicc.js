@@ -3,9 +3,10 @@ const WordDictionary = function () {
 }
 
 WordDictionary.prototype.addWord = function (word) {
-  const node = this.trie
+  let node = this.trie
   for (const char of word) {
     if (node[char] === null) node[char] = {}
+    node = node[char]
   }
   node.isEnd = true
 }
