@@ -4,8 +4,8 @@ const maxArea = (height) => {
   let maxima = 0
   while (left < right) {
     const width = right - left
-    const maxArea = Math.min(height[left], height[right]) * width
-    maxima = Math.max(maxima, maxArea)
+    const currArea = Math.min(height[left], height[right]) * width
+    maxima = Math.max(maxima, currArea)
     if (height[left] <= height[right]) {
       left++
     } else {

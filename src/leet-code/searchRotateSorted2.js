@@ -1,12 +1,12 @@
-const searchSortedRotatedArray = (nums, target) => {
+const searchRotateSorted2 = (nums, target) => {
+  nums = [...new Set(nums)]
   let left = 0
   let right = nums.length - 1
   while (left <= right) {
     const mid = Math.floor((left + right) / 2)
     if (nums[mid] === target) {
-      return mid
+      return true
     }
-    // check right sorted side
     if (nums[right] > nums[mid]) {
       if (target > nums[mid] && target <= nums[right]) {
         left = mid + 1
@@ -21,6 +21,6 @@ const searchSortedRotatedArray = (nums, target) => {
       }
     }
   }
-  return -1
+  return false
 }
-console.log(searchSortedRotatedArray([4, 5, 6, 7, 0, 1, 2, 3], 0))
+console.log(searchRotateSorted2([1, 0, 1, 1, 1], 0))

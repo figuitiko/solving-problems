@@ -12,4 +12,5 @@ const findMin = (nums) => {
   return nums[left]
 }
 
-console.log(findMin([3, 4, 5, 1, 2]))
+// console.log(findMin([3, 4, 5, 1, 2]))
+console.log(findMin([3, 1, 2]))
