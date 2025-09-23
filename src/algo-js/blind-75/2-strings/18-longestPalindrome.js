@@ -17,6 +17,8 @@ const longestPalindrome = (s) => {
   }
   return longest
 }
+
+// another solution
 const longestPalindrome1 = (s) => {
   // console.log(s.split('').sort())
   if (!s) return 0
@@ -25,7 +27,7 @@ const longestPalindrome1 = (s) => {
     acc[curr] = (acc[curr] + 1) || 1
     return acc
   }, {})
-  console.log({ frecMap })
+
   const valuesArr = Object.values(frecMap)
   if (valuesArr.length === 1) {
     return valuesArr[0]
@@ -39,8 +41,9 @@ const longestPalindrome1 = (s) => {
   return res % 2 !== 0 ? res : res < s.length ? res + 1 : res
 }
 
-// console.log(longestPalindrome('babad'))
-// console.log(longestPalindrome('abccccdd'))
-// console.log(longestPalindrome1('dccaccd'))
-// console.log(longestPalindrome1('ccc'))
+console.log(longestPalindrome('babad'))
+console.log(longestPalindrome('abccccdd'))
+console.log(longestPalindrome('abccccdd'))
+console.log(longestPalindrome1('dccaccd'))
+console.log(longestPalindrome1('ccc'))
 console.log(longestPalindrome1('bananas'))
