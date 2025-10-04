@@ -20,6 +20,25 @@ const removeNthFromEnd = (head, n) => {
   left.next = left.next.next
   return dummy.next
 }
+
+const removeNthFromEnd1 = (head, n) => {
+  const dummy = new ListNode(0)
+  dummy.next = head
+  let left = dummy
+  let right = head
+
+  while (right) {
+    if (n <= 0) {
+      left = left.next
+    } else {
+      n -= 1
+    }
+    right = right.next
+  }
+
+  left.next = left.next.next
+  return dummy.next
+}
 const five = new ListNode(5)
 const four = new ListNode(4, five)
 const three = new ListNode(3, four)
@@ -27,3 +46,4 @@ const two = new ListNode(2, three)
 const one = new ListNode(1, two)
 
 console.log(removeNthFromEnd(one, 2))
+console.log(removeNthFromEnd1(one, 2))

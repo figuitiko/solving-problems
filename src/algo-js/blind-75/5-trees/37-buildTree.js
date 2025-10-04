@@ -27,3 +27,23 @@ const buildTree1 = (preOrder, inOrder) => {
   return root
 }
 console.log(buildTree1(preOrder, inOrder))
+
+const buildTree2 = (preOrder, inOrder) => {
+  let preIdx = 0
+  const mapInOrder = new Map()
+
+  inOrder.forEach((val, idx) => {
+    mapInOrder.set(val, idx)
+  })
+  const recurse = (l, r) => {
+    if (l > r) return null
+    const rootVal = preOrder[preIdx++]
+    const root = new TreeNode(rootVal)
+    const mid = mapInOrder.get(rootVal)
+    root.left = recurse(l, mid - 1)
+    root.right = recurse(mid + 1, r)
+    return root
+  }
+  return recurse(0, inOrder.length - 1)
+}
+console.log(buildTree2(preOrder, inOrder))

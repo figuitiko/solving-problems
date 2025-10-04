@@ -9,7 +9,6 @@ const subSets = (nums) => {
     }
   }
   dfs(0, [])
-  console.log(result.length)
   return result
 }
 
