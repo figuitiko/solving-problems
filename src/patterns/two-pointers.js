@@ -1,4 +1,4 @@
-// Problem: Given a sorted array, find if there exists a pair with a given sum
+// Problem: Given a sorted array, find if there exists a pair with a givemun sum
 
 function hasPairWithSum (arr, target) {
   let left = 0; let right = arr.length - 1

@@ -11,4 +11,10 @@ class TreeNode {
     this.right = right
   }
 }
-module.exports = { ListNode, TreeNode }
+class GraphNode {
+  constructor (val = 0, neighbors = []) {
+    this.val = val
+    this.neighbors = neighbors
+  }
+}
+module.exports = { ListNode, TreeNode, GraphNode }
