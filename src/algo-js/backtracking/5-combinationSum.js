@@ -14,7 +14,7 @@ const combinationSum = (k, n) => {
   dfs(1, [], n)
   return result
 }
-// console.log(combinationSum(3, 9))
+console.log(combinationSum(3, 9))
 
 const generateCombinations = (arr, k) => {
   const result = []
@@ -32,7 +32,7 @@ const generateCombinations = (arr, k) => {
   return result
 }
 
-// console.log(generateCombinations([1, 2, 3, 4], 3))
+console.log(generateCombinations([1, 2, 3, 4], 3))
 
 const combinationSum1 = (candidates, target) => {
   const result = []
