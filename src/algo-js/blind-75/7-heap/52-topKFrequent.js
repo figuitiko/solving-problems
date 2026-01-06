@@ -11,10 +11,11 @@ const topKFrequent = (nums, k) => {
     }
   }
   for (const [num, freq] of Object.entries(map)) {
+    const numVal = Number(num)
     if (!bucket[freq]) {
-      bucket[freq] = new Set().add(num)
+      bucket[freq] = new Set().add(numVal)
     } else {
-      bucket[freq] = bucket[freq].add(num)
+      bucket[freq] = bucket[freq].add(numVal)
     }
   }
   for (let i = bucket.length - 1; i >= 0; i--) {
