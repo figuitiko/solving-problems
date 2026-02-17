@@ -2,7 +2,7 @@ const merge = (intervals) => {
   const start = 0
   const end = 1
 
-  intervals = intervals.sort((a, b) => a[start] - b[start])
+  intervals.sort((a, b) => a[start] - b[start])
   let previous = intervals[start]
   const res = [previous]
   for (const current of intervals) {

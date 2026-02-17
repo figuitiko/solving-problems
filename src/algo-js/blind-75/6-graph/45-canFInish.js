@@ -12,7 +12,7 @@ const canFinish = (numCourses, prerequisites) => {
 
   const dfs = (curr) => {
     if (visited.has(curr)) return false
-    if (adjList[curr] === curr) return true
+    if (adjList[curr] && adjList[curr].length === 0) return true
     visited.add(curr)
     if (adjList[curr]) {
       for (const neigh of adjList[curr]) {
